@@ -40,24 +40,25 @@ class App extends Component {
     this.getCharacters(url);
   }
 
-  getButtons() {
-    let buttons = [];
-
-    if(this.state.previousPage != null)
-      buttons.push(<NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>)
-
-    if(this.state.nextPage != null)
-      buttons.push(<NavButton name={"nextButton"} url={this.state.nextPage} onButtonClick={this.onButtonClick}>Next</NavButton>)
-
-    return buttons;
-  }
+  // getButtons() {
+  //   let buttons = [];
+  //
+  //   if(this.state.previousPage != null)
+  //     buttons.push(<NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>)
+  //
+  //   if(this.state.nextPage != null)
+  //     buttons.push()
+  //
+  //   return buttons;
+  // }
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
         <div className="buttonDiv">
-          { this.getButtons() }
+          <NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>
+          <NavButton name={"nextButton"} url={this.state.nextPage} onButtonClick={this.onButtonClick}>Next</NavButton>
         </div>
         <CharacterList characterList={this.state.starwarsChars}/>
       </div>

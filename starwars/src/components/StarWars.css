@@ -37,7 +37,26 @@ h2 {
 }
 
 button {
-    height: 50px;
     background-color: #D1C0AE;
     border: 1px solid black;
+    padding: 20px 5%;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.blankButton {
+    opacity: 0;
+}
+
+#nextButton {
+    align-self: flex-end;
+}
+
+#previousButton {
+    align-self: flex-start;
 }
