@@ -24,7 +24,10 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({ starwarsChars: data.results,
+          nextPage: data.next,
+          previousPage: data.previous
+        });
       })
       .catch(err => {
         throw new Error(err);
