@@ -25,12 +25,16 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+> React JS is a javascript framework. It uses a virtual DOM to control DOM manipulation. This allows DOM manipulation to be more effiecient, as only the thing being updated needs to rerender.
 
 - [ ] What does it mean to _think_ in react?
+> Thinking in React means looking at a page and breaking down the elements on that page and how they relate to each other, then implmenting that design, first as a static prototype and then build in the dynamic elements with consideration of how data is passed around and where it needs to be stored and updated.
 
 - [ ] Describe state.
+> State is an object on a class-based component that holds various values they may need to be referenced or updated. It can be updated using setState, which will automatically call the render() method of that class.
 
 - [ ] Describe props.
+> Props are analogous to data tags on HTML elements. It is a custom field that is attached to a piece of JSX and passed to a child component from a parent.
 
 ## Project Set Up
 
