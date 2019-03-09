@@ -1,3 +1,8 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
 .characterList {
     display: flex;
     justify-content: space-around;
@@ -17,5 +22,16 @@
 
 .characterData {
     text-align: left;
-    margin-left: 15px;
+    font-size: 2rem;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #D1C0AE; /*#2D231B;*/
+    text-shadow: 2px 2px #2D231B; /*#c7ccd0;*/
 }

@@ -13,7 +13,7 @@ const CharacterList = ({ characterList }) => {
 }
 
 const renderCharacter = characterList => {
-    const characters = characterList.map(character => <Character characterData={character} />);
+    const characters = characterList.map(character => <Character key={character.url} characterData={character} />);
 
 
     return characters;

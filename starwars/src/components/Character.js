@@ -14,12 +14,12 @@ const Character =  ({ characterData: {
       <div className="character">
           <h2>{ name }</h2>
           <div className="characterData">
-              <p><strong>Birth Year </strong> {birth_year}</p>
-              <p><strong>Eye Color </strong>{eye_color}</p>
-              <p><strong>Hair Color </strong>{hair_color}</p>
-              <p><strong>Height </strong>{height}</p>
-              <p><strong>Weight </strong>{mass}</p>
-              <p><strong>Skin Color </strong>{skin_color}</p>
+              <div className="detail"> <p><strong>Birth Year </strong></p><p> {birth_year}</p> </div>
+              <div className="detail"> <p><strong>Eye Color </strong></p><p>{eye_color}</p></div>
+              <div className="detail"> <p><strong>Hair Color </strong></p><p>{hair_color}</p></div>
+              <div className="detail"> <p><strong>Height </strong></p><p>{height}</p></div>
+              <div className="detail"> <p><strong>Weight </strong></p><p>{mass}</p></div>
+              <div className="detail"> <p><strong>Skin Color </strong></p><p>{skin_color}</p></div>
           </div>
       </div>
     );
