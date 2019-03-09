@@ -13,7 +13,7 @@ html {
 }
 
 .character {
-    width: 35%;
+    width: 32%;
     border: 2px solid #5A483B;
     margin-bottom: 25px;
     background-color: rgba(176, 146, 105, .9);
@@ -34,4 +34,10 @@ h2 {
     font-size: 2.5rem;
     color: #D1C0AE; /*#2D231B;*/
     text-shadow: 2px 2px #2D231B; /*#c7ccd0;*/
+}
+
+button {
+    height: 50px;
+    background-color: #D1C0AE;
+    border: 1px solid black;
 }

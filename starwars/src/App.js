@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import CharacterList from './components/CharacterList';
+import NavButton from './components/NavButton';
 
 class App extends Component {
   constructor() {
@@ -34,10 +35,30 @@ class App extends Component {
       });
   };
 
+  onButtonClick = url => {
+    if(!url) return;
+    this.getCharacters(url);
+  }
+
+  getButtons() {
+    let buttons = [];
+
+    if(this.state.previousPage != null)
+      buttons.push(<NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>)
+
+    if(this.state.nextPage != null)
+      buttons.push(<NavButton name={"nextButton"} url={this.state.nextPage} onButtonClick={this.onButtonClick}>Next</NavButton>)
+
+    return buttons;
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <div className="buttonDiv">
+          { this.getButtons() }
+        </div>
         <CharacterList characterList={this.state.starwarsChars}/>
       </div>
     );
