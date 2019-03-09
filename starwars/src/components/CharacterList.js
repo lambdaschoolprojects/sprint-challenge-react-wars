@@ -1,9 +1,12 @@
 import React from 'react';
+
 import Character from "./Character";
+
+import './StarWars.css';
 
 const CharacterList = ({ characterList }) => {
     return (
-        <div>
+        <div className="characterList">
             { renderCharacter(characterList) }
         </div>
     )
