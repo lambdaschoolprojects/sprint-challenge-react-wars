@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import CharacterList from './components/CharacterList';
+import NavButton from './components/NavButton';
+
 class App extends Component {
   constructor() {
     super();
@@ -22,17 +25,42 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({ starwarsChars: data.results,
+          nextPage: data.next,
+          previousPage: data.previous
+        });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
 
+  onButtonClick = url => {
+    if(!url) return;
+    this.getCharacters(url);
+  }
+
+  // getButtons() {
+  //   let buttons = [];
+  //
+  //   if(this.state.previousPage != null)
+  //     buttons.push(<NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>)
+  //
+  //   if(this.state.nextPage != null)
+  //     buttons.push()
+  //
+  //   return buttons;
+  // }
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <div className="buttonDiv">
+          <NavButton name="previousButton" url={this.state.previousPage} onButtonClick={this.onButtonClick}>Previous</NavButton>
+          <NavButton name={"nextButton"} url={this.state.nextPage} onButtonClick={this.onButtonClick}>Next</NavButton>
+        </div>
+        <CharacterList characterList={this.state.starwarsChars}/>
       </div>
     );
   }

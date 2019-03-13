@@ -1,0 +1,62 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.characterList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.character {
+    width: 32%;
+    border: 2px solid #5A483B;
+    margin-bottom: 25px;
+    background-color: rgba(176, 146, 105, .9);
+    box-shadow: 2px 2px 5px #775537;
+}
+
+.characterData {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #D1C0AE; /*#2D231B;*/
+    text-shadow: 2px 2px #2D231B; /*#c7ccd0;*/
+}
+
+button {
+    background-color: #D1C0AE;
+    border: 1px solid black;
+    padding: 20px 5%;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.blankButton {
+    opacity: 0;
+}
+
+#nextButton {
+    align-self: flex-end;
+}
+
+#previousButton {
+    align-self: flex-start;
+}
